@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Buscador interactivo de países del mundo con información detallada y clima en tiempo real">
+    <title>Buscador de Países del Mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5">
+</head>
+
+<body>
+
+    <!-- Header: Home with title and search input (always visible) -->
+    <header class="header" id="header">
+        <h1 id="mainTitle">Países del Mundo</h1>
+        <p class="subtitle">Explora información y clima de cualquier país</p>
+        <div class="search-container" id="searchContainer">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" id="searchInput" placeholder="Buscar un país..." autocomplete="off"
+                    aria-label="Buscar países">
+                <button class="clear-btn" id="clearBtn" aria-label="Limpiar búsqueda" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Results area -->
+    <main id="results" class="results-container" role="main" aria-live="polite"></main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Datos de <a href="https://restcountries.com/" target="_blank" rel="noopener">REST Countries</a> &
+            <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeather</a>
+        </p>
+    </footer>
+
+    <script src="app.js?v=5"></script>
+</body>
+
+</html>
